@@ -1,4 +1,4 @@
-A concise README for the project is provided below.
+
 
 ```markdown
 # CyberBunker
