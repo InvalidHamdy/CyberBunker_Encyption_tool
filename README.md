@@ -1,78 +1,124 @@
+<h1 align="center">🛡️ CyberBunker – Encryption Tool</h1>
+<p align="center">A multi-algorithm encryption desktop app built with Python & Tkinter.</p>
+<p align="center"><b>Secure. Fast. Educational.</b></p>
 
+---
 
-```markdown
-# CyberBunker
+## 🔐 Overview
+CyberBunker is a desktop encryption tool showcasing a collection of classical and modern cryptographic algorithms inside a clean, interactive GUI.  
+Built with Python, Tkinter, and CustomTkinter, the app includes user authentication, password recovery, file encryption/decryption, and RSA key generation.
 
-A Python/Tkinter desktop application that demonstrates multiple classical and modern cryptographic algorithms with a GUI. The app includes user authentication, password recovery, and file-based encryption/decryption workflows.
+---
 
-## Features
-- GUI built with `tkinter` and `customtkinter`
-- Implementations of common ciphers:
-  - Caesar (`algorithms/CeaserCipher.py`)
-  - Affine (`algorithms/AFFINE.py`)
-  - Vigenère, Playfair, Rail Fence, ROT13, Substitution, RSA (see `algorithms/` folder)
-- User authentication and password recovery handlers in `services/`
-- Simple file upload / overwrite support in the encryption UI
-- RSA key generation and encryption helpers
-- Test file for Caesar cipher: `test.py`
+## 🚀 Features
 
-## Repo structure
-- `app.py` — application entry point
-- `LogIn.py` — login UI and navigation
-- `AlgorithmDashBoard.py` — dashboard UI for algorithm selection
-- `EncryptionPage.py` — main encryption/decryption UI
-- `algorithms/` — cipher implementations and utilities
-- `services/` — business logic (login, forgot password, OTP, etc.)
-- `database/DATABASE_CYBERSECURTY.sql` — sample SQL for initial DB (editable)
-- `test.py` — simple unit test for Caesar cipher
-- `background3.png`, `Frame 1.png`, `logo.png` — UI assets
+### 🎨 GUI
+- Modern interface using Tkinter + CustomTkinter  
+- Dashboard layout for selecting algorithms  
+- Includes UI assets: `background3.png`, `Frame 1.png`, `logo.png`
 
-## Requirements
+### 🔑 Algorithms Included (in `algorithms/`)
+- Caesar Cipher  
+- Affine Cipher  
+- Vigenère Cipher  
+- Playfair Cipher  
+- Rail Fence Cipher  
+- Substitution Cipher  
+- ROT13  
+- RSA (key generation + encryption)
+
+### 👤 User System (in `services/`)
+- Login & authentication  
+- Forgot Password + OTP verification  
+- SQLite / SQLiteCloud support  
+- Environment-based DB configuration
+
+### 📁 Encryption Workflow
+- Encrypt/decrypt text or files  
+- File upload, overwrite, and safe output handling  
+
+---
+
+## 🗂️ Project Structure
+CyberBunker/
+│
+├── app.py
+├── LogIn.py
+├── AlgorithmDashBoard.py
+├── EncryptionPage.py
+│
+├── algorithms/
+├── services/
+├── database/
+│ └── DATABASE_CYBERSECURTY.sql
+│
+├── assets/
+│ ├── background3.png
+│ ├── Frame 1.png
+│ └── logo.png
+│
+└── test.py
+
+yaml
+Copy code
+
+---
+
+## 🧩 Requirements
 - Python 3.8+
-- Recommended packages (put into `requirements.txt`):
-  - `pillow`
-  - `customtkinter`
-  - `python-dotenv`
-  - `sqlitecloud`
-  - (add any other algorithms' dependencies)
 
 Install dependencies:
 ```bash
-python -m pip install -r requirements.txt
-```
+pip install -r requirements.txt
+requirements.txt should include:
 
-## Configuration
-Create a `.env` file in the project root with at least:
-```
-CONNECTION_STRING=<your_sqlitecloud_connection_string_or_db_path>
-```
-Adjust the connection string to match your `sqlitecloud` configuration or local SQLite DB.
+pillow
 
-## Database
-A sample SQL file is provided at `database/DATABASE_CYBERSECURTY.sql`. Review and correct column names or data as needed before seeding the database.
+customtkinter
 
-## Running the app
-From project root:
-```bash
+python-dotenv
+
+sqlitecloud
+
+⚙️ Configuration
+Create a .env file:
+
+ini
+Copy code
+CONNECTION_STRING=<your_sqlitecloud_connection_string_or_local_db_path>
+🗄️ Database
+A starter SQL schema is included at:
+
+pgsql
+Copy code
+database/DATABASE_CYBERSECURTY.sql
+Review and update column names or data before seeding.
+
+▶️ Running the App
+bash
+Copy code
 python app.py
-```
-This launches the login window. Use the UI to navigate to the dashboard and encryption pages.
-
-## Tests
-Run the simple Caesar cipher test:
-```bash
+🧪 Tests
+bash
+Copy code
 python test.py
-```
+🧠 Notes
+Ensure all image assets exist in the working directory.
 
-## Notes and development tips
-- UI depends on local image assets (`background3.png`, `Frame 1.png`, `logo.png`) — ensure these exist in the working directory.
-- Environment and DB connection must be configured before attempting login or password reset flows.
-- Handlers in `services/` use `sqlitecloud` and `python-dotenv`—verify credentials and environment variables.
+DB connection must be configured before login or OTP flows.
 
-## Contributing
-- Fork, create a feature branch, and submit a pull request.
-- Add unit tests for new cipher implementations or bug fixes.
+Encryption algorithms are modular and easy to extend.
 
-## License
-No license specified. Add a `LICENSE` file to clarify terms.
-```
+🤝 Contributing
+Fork
+
+Create a feature branch
+
+Add any new cipher with tests
+
+Submit a PR
+
+📜 License
+No license specified — consider adding one (MIT recommended).
+
+<p align="center">🔐 Built by a security-focused team. Stay encrypted.</p> ```
